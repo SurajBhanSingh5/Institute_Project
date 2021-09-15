@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+        <title>NTH</title>
+    </head>
+    <body>
+    {% block content %}
+        <br>
+        <div class="container">
+        {% if courses %}
+            <table class="table table-bordered text-center">
+                <thead>
+                <tr class="bg-success text-white">
+                    <th>Course Id</th>
+                    <th>Course Name</th>
+                    <th>Start Date</th>
+                    <th>Start Time</th>
+                    <th>Duration</th>
+                    <th>Trainer Name</th>
+                    <th>Trainer Exp</th>
+                    <th>Mode of Training</th>
+                    <th>Fee</th>
+                </tr>
+                </thead>
+            <tbody>
+                {% for course in courses %}
+                    <tr class="bg-dark text-white">
+                        <td>{{ course.course_id}}</td>
+                        <td>{{ course.course_name }}</td>
+                        <td>{{ course.start_date }}</td>
+                        <td>{{ course.start_time }}</td>
+                        <td>{{ course.duration }}</td>
+                        <td>{{ course.trainer_name }}</td>
+                        <td>{{ course.trainer_exp }}</td>
+                        <td>{{ course.mode_of_training }}</td>
+                        <td>{{ course.fee }}</td>
+                    </tr>
+
+
+
+                {% endfor %}
+            </tbody>
+            </table>
+
+
+        {% endif %}
+        </div>
+
+
+    {% endblock %}
+    </body>
+
+</html>

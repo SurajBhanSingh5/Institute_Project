@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+<html>
+    <head>
+        <title>NTH</title>
+
+    </head>
+
+    <body>
+    {% block content %}
+        <style>
+            .btn{
+                margin-top: 10px;
+        }
+            input[name]{
+                margin-top: -5px;
+            }
+            label{
+                font-size: 20px;
+            }
+            .cls1{
+                 margin-left: 30px;
+            }
+            .cls2{
+                margin-top: 25px;
+                margin-right: 16px;
+            }
+
+    </style>
+        <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-4">
+                <form method="POST">
+                    {% csrf_token %}
+                <label>Enter Your Name :</label>
+                <input type="text" name="name1" class="form-control">
+
+                <label>Enter Your Email ID : </label>
+                <input type="email" name="email1" class="form-control">
+
+                <label>Enter Your Mobile No : </label>
+                <input type="number" name="mobile1" class="form-control">
+
+                    <label>Enter Your Company :</label>
+                <input type="text" name="company1" class="form-control">
+
+                <label>Enter Your Salary: </label>
+                <input type="number" name="salary1" class="form-control">
+
+                <label>Enter Your Location : </label>
+                <input type="text" name="location1" class="form-control">
+
+                <center>
+                <input type="submit" value="Submit" class="btn btn-success">
+                <input type="reset" value="Clear" class="btn btn-danger">
+                </center>
+                </form>
+
+            </div>
+            <div class="col-md-8">
+                <div class="row cls1">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31111.278002946397!2d77.59508042150779!3d12.913521817206162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae14fc91a93031%3A0xf0afe62576cbdc3f!2sBTM%20Layout%2C%20Bengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1625594222195!5m2!1sen!2sin"
+                            width="950" height="350" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+
+                <div class="row cls1 cls2" >
+                    <div class="col-md-6 text-center bg-success text-white">
+                        <h3>Address 1 :</h3>
+                        <h3>Bangalore,</h3>
+                        <h3>India</h3>
+
+                    </div>
+                    <div class="col-md-6 text-center bg-danger text-white">
+                        <h3>Address 2 :</h3>
+                        <h3>Hyderabad,</h3>
+                        <h3>India</h3>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    {% endblock %}
+    </body>
+
+</html>
