@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+<html>
+    <head>
+        <title>NTH</title>
+    </head>
+    <body>
+    {% block content %}
+        <style>
+                .cls1{
+                    display:flex;
+                    margin-top: 20px;
+                }
+                .cls2{
+                    margin-top: 100px;
+                    padding-left: 80px;
+                }
+                p{
+                    font-size: 20px;
+                    color: blue;
+                    text-align: center;
+                }
+        </style>
+        <div class="containter-fluid">
+            <div class="row">
+                <div class="col-md-4 cls2">
+                    <h3>About Us :</h3>
+                        <p> This is one of the best institute in Python Training,
+                         It is also providing Django Training,
+                        This is best institute in Full Stack Training,
+                        It gives good knowledge to the students.....!</p>
+                    <h2 class="text-center">Thank You..!</h2>
+
+                </div>
+                <div class="offset-md-2 col-md-4 cls1" >
+                    <img src="{% static 'images/img.png'%}" style="height: 100%; width: 100%">
+                </div>
+            </div>
+
+
+        </div>
+
+    {% endblock %}
+    </body>
+</html>
